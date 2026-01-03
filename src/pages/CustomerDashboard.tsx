@@ -169,9 +169,13 @@ export default function CustomerDashboard() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="outline">
+              <Button variant="outline" onClick={() => navigate('/notifications')}>
                 <Icon name="Bell" size={18} className="mr-2" />
                 Уведомления
+              </Button>
+              <Button variant="outline" onClick={() => navigate('/chat')}>
+                <Icon name="MessageSquare" size={18} className="mr-2" />
+                Сообщения
               </Button>
               <Dialog>
                 <DialogTrigger asChild>
