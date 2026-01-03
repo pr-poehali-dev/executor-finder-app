@@ -114,7 +114,7 @@ export default function Index() {
               </a>
             </nav>
             <div className="flex items-center gap-3">
-              <Button variant="outline">Войти</Button>
+              <Button variant="outline" onClick={() => navigate('/dashboard')}>Мои заказы</Button>
               <Button>Создать заказ</Button>
             </div>
           </div>
