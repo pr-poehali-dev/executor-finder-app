@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -85,6 +86,7 @@ const performers = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSort, setSelectedSort] = useState('rating');
@@ -317,7 +319,9 @@ export default function Index() {
                         </div>
                       </DialogContent>
                     </Dialog>
-                    <Button variant="outline">Профиль</Button>
+                    <Button variant="outline" onClick={() => navigate(`/performer/${performer.id}`)}>
+                      Профиль
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
